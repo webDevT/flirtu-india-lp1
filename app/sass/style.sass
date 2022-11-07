@@ -695,6 +695,154 @@ a:hover
 	font-size: 3vh
 .bold--s 
 	font-size: 2.5vh
+
+.button-animation 
+  position: relative
+  text-decoration: none
+  color: #fff
+  overflow: hidden
+  &:before 
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 5vh
+    height: 100%
+    background-color: rgba(#fff, 1)
+    transform: translateX(-4em) skewX(-45deg)
+    animation: move-light
+    animation-iteration-count: infinite
+    
+    animation-duration: 5s 
+    animation-delay: 2s
+    
+ 
+@keyframes move-light
+  0%
+  	transform: translateX(-4em) skewX(-45deg)
+  20%
+  	transform: translateX(10em) skewX(-45deg)
+  100%
+  	transform: translateX(10em) skewX(-45deg) 
+
+
+.button-s.like-button 
+	&:before 
+		animation: move-light2
+		animation-iteration-count: infinite
+		animation-duration: 5s
+		animation-delay: 2s
+		transform: translateX(-4em) skewX(-45deg)
+@keyframes move-light2
+  0%
+  	transform: translateX(-4em) skewX(-45deg)
+  50%
+  	transform: translateX(-4em) skewX(-45deg)
+  70%
+  	transform: translateX(10em) skewX(-45deg) 
+  100%
+  	transform: translateX(10em) skewX(-45deg) 
+
+.button-animation 
+ 	span 
+ 		display: block
+ 		animation: scale-anim
+ 		animation-iteration-count: infinite
+
+ 		animation-duration: 5s
+ 		animation-delay: 3s
+ 		
+ 		transform: scale(1) rotate(0)
+
+.button-animation.like-button
+	span
+		animation: scale-anim2
+		animation-iteration-count: infinite
+		animation-duration: 5s
+		animation-delay: 3s		
+		transform: scale(1)
+@keyframes scale-anim
+  0%
+    transform: scale(1) rotate(0)
+  5%
+   	transform: scale(1.6) rotate(25deg)
+  10%
+  	transform: scale(1) rotate(0)
+  15% 
+    transform: scale(1.6) rotate(-25deg)
+  20%
+  	transform: scale(1) rotate(0)
+  100% 
+   	transform: scale(1) rotate(0)
+@keyframes scale-anim2
+  0%
+    transform: scale(1) rotate(0)
+  50%
+   	transform: scale(1) rotate(0)
+  55%
+  	transform: scale(1.6) rotate(25deg)
+  60%
+  	transform: scale(1) rotate(0)
+  65%
+  	transform: scale(1.6) rotate(-25deg)
+  70%
+  	transform: scale(1) rotate(0)
+  100% 
+  	transform: scale(1) rotate(0)
+
+.finger
+	position: absolute
+	top: 50vh
+	right: 40vw
+	font-size: 15vh
+	z-index: 999
+	transform: rotate(-60deg)
+	animation: jump
+	animation-iteration-count: infinite
+	animation-duration: 1s
+
+@keyframes jump 
+	0% 
+		transform: rotate(-60deg) translateX(-20%)
+	50%
+		transform: rotate(-60deg) translateX(0%)
+	100%
+		transform: rotate(-60deg) translateX(-20%)
+//start button style
+.text-wrapper
+	.green-button 
+		color: #fff
+.green-button
+	display: flex
+	justify-content: center
+	align-items: center
+	background: #00c217
+	color: #fff
+	font-weight: bold
+	font-size: 3vh
+	text-decoration: none
+	padding: 2vh 0
+	border-radius: 1vh
+	background: linear-gradient(#00c217, #0d7319) #0d7319
+.text-wrapper.text-wrapper--button
+	margin-top: 2vh
+//end button style
+//start bage wrapper
+.badge__wrapper
+	display: flex
+	justify-content: center
+	flex-wrap: wrap 
+	padding-top: 1vw
+	padding-bottom: 9vw
+
+.bage-item
+	width: 40%
+	display: flex
+	justify-content: center
+	margin-top: 3vw 
+	margin-bottom: 3vw
+	img 
+		max-width: 25vw
 @import "media"
 
 
